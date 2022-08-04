@@ -1,0 +1,78 @@
+//!! Remember that you need to have the LAST VERSION of NodeJS installed: https://nodejs.org/en/download/
+
+// 1. INSTALL HARDHAT
+
+    npm install --save-dev hardhat
+    npx hardhat
+
+// 2. INSTALL DEPENDENCIES
+
+    npm install --save-dev @nomicfoundation/hardhat-toolbox
+    npm install --save-dev @nomicfoundation/hardhat-chai-matchers
+
+    npm install --save-dev @openzeppelin/contracts
+
+    npm install --save-dev @nomiclabs/hardhat-etherscan
+    npm install --save-dev @cronos-labs/hardhat-cronoscan
+
+
+// 3. UNDER "contracts/", RENAME "Lock.sol" TO YOUR DESIRED CONTRACT NAME
+
+// 4. UNDER "scripts/", ON "deploy.sol" RENAME ALL THE "Lock" AND "lock" FIELDS WITH YOUR CONTRACT NAME. !! PRESERVE ORIGINAL CASE !!
+
+// 5. MAKE SURE the "deploy()" function has the correct contract constructor parameters
+
+// 6. MODIFY "deploy.js" WITH YOUR NEEDS. FOR EXAMPLE, WE ADD ETHERSCAN VERIFICATION CODE JUST AFTER the last console.log:
+
+    await yourContractName.deployTransaction.wait(5);
+    
+    // We verify the contract
+    await hre.run("verify:verify", {
+        address: yourContractName.address,
+        constructorArguments: [],
+    });
+
+// 7. ON "hardhat.config.js" ADD THIS REQUIRE TO THE TOP:
+
+    require("@nomiclabs/hardhat-etherscan");
+    require("@cronos-labs/hardhat-cronoscan");
+        
+// 8. ON "hardhat.config.js" ADD THESE FIELDS BEFORE "module.exports" part:
+
+    const PRIVATE_KEY = "";             // Populate from MetaMask, after sign-in
+    const MUMBAI_NETWORK_URL = "";      // Populate as described in UPDATE      
+    const POLYGONSCAN_API_KEY = "";     // Populate from polygonscan.com, after sign-in
+
+    UPDATE: Since the creation of this repo and related videos there has been a technical change.
+    Now, populate the MUMBAI_NETWORK_URL from the value you set up on
+    https://moralis.io/largenodes.
+    
+    For more information see
+    https://github.com/MoralisWeb3/changelog/blob/main/2022-07-11-speedy-node-removal.md
+
+// 9. MODIFY "module.exports" in "hardat.config.js" WITH YOUR NEEDS, LIKE THIS:
+
+    module.exports = {
+      solidity: "0.8.7",
+      networks: {
+        mumbai: {
+          url: MUMBAI_NETWORK_URL,
+          accounts: [PRIVATE_KEY]
+        }
+      },
+      etherscan: {
+        apiKey: POLYGONSCAN_API_KEY 
+      }
+    };
+
+// 10. COMPILE SMART CONTRACT
+
+    npx hardhat clean
+    npx hardhat compile
+
+// 11. RUN "scripts/deploy.js" TO DEPLOY SMART CONTRACT
+
+    npx hardhat run scripts/deploy.js --network cronosTestnet
+
+************* CONTRACT DEPLOYED AND VERIFIED *************
+
