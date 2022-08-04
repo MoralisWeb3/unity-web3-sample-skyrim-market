@@ -6,4 +6,4 @@ RED OUTFIT
 https://ipfs.moralis.io:2053/ipfs/QmU4PyAgawu15FEwBAnuwMzW8VKN8FcBPLoJTUuSrLroGQ/RedOutfit_637952178284608723.json
 
 YELLOW OUTFIT
-https://ipfs.moralis.io:2053/ipfs/Qme79coeQWLX297xErjmaY3PJhwP28gxZGcdQkRYofqG7W/YellowOutfit_637952178739196739.json
+https://ipfs.moralis.io:2053/ipfs/QmUjcy9RDurZQmQ3D9pVRk68YtfVTtTYiLdeaPLr7mc2a7/YellowOutfit_637952314036943280.json

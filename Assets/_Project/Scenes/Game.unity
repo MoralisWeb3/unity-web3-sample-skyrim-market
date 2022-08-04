@@ -3865,9 +3865,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dontDestroyOnLoad: 0
-  septimContractAddress: 0x1ad751efe9aaC34A56B331e5F3497edE00a008f8
-  outfitContractAddress: 0x8A6967270fF923833123e347B4053ffF728580Cb
-  gameContractAddress: 0x9ebf541ef055aC81641de9114d11E3D4A77cdC13
+  septimContractAddress: 0xebD253f19A7Fb3Cc4Af634d897AFC13d4f45C8c8
+  outfitContractAddress: 0xAcdB58365bb465E44a2800cf8531170e06206bbd
+  gameContractAddress: 0x8F0e4D3779E928040cd9BA2AEcC7634f0EF6F970
   gameContractAbi: '[{"inputs":[{"internalType":"address","name":"septimContractAddr","type":"address"},{"internalType":"address","name":"outfitContractAddr","type":"address"}],"stateMutability":"nonpayable","type":"constructor"},{"inputs":[{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"addSeptim","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"},{"internalType":"uint256","name":"price","type":"uint256"},{"internalType":"string","name":"metadataUrl","type":"string"}],"name":"buyOutfit","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"getSeptimBalance","outputs":[{"internalType":"uint256","name":"balance","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"removeSeptim","outputs":[],"stateMutability":"nonpayable","type":"function"}]'
 --- !u!114 &605362994
 MonoBehaviour:
