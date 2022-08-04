@@ -3861,7 +3861,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &605362993
 MonoBehaviour:
@@ -3876,9 +3876,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dontDestroyOnLoad: 0
-  septimContractAddress: 0xdC0F697f9979D17C8ed4B379E40670F7af673726
-  outfitContractAddress: 0xc9cf3248Bf03c922961D5B42B14593Bb100f3787
-  gameContractAddress: 0x6b31Ba8D68E833362162f769aE96dF9bCAeA098e
+  septimContractAddress: 0x1ad751efe9aaC34A56B331e5F3497edE00a008f8
+  outfitContractAddress: 0x8A6967270fF923833123e347B4053ffF728580Cb
+  gameContractAddress: 0x9ebf541ef055aC81641de9114d11E3D4A77cdC13
   gameContractAbi: '[{"inputs":[{"internalType":"address","name":"septimContractAddr","type":"address"},{"internalType":"address","name":"outfitContractAddr","type":"address"}],"stateMutability":"nonpayable","type":"constructor"},{"inputs":[{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"addSeptim","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"},{"internalType":"uint256","name":"price","type":"uint256"},{"internalType":"string","name":"metadataUrl","type":"string"}],"name":"buyOutfit","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"getSeptimBalance","outputs":[{"internalType":"uint256","name":"balance","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"removeSeptim","outputs":[],"stateMutability":"nonpayable","type":"function"}]'
 --- !u!114 &605362994
 MonoBehaviour:
@@ -6385,7 +6385,7 @@ GameObject:
   - component: {fileID: 931081983}
   - component: {fileID: 931081984}
   m_Layer: 0
-  m_Name: PlayFabServer
+  m_Name: PlayFabServerSimulator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6404,7 +6404,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &931081983
 MonoBehaviour:
@@ -6419,6 +6419,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dontDestroyOnLoad: 0
+  secretKey: 9DBIWEUBB9IXEDT3C38H5X8R4X5WDR79MUIQKQ8YC7FGREQJFX
+  catalogName: Outfit Shop Catalog
+  currencyCode: CR
   playerId: 
   currentCrystalBalance: 0
 --- !u!114 &931081984
@@ -11780,7 +11783,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exchangeTx: {fileID: 850080814}
   outfitTx: {fileID: 519802949}
-  itemTx: {fileID: 1679230429}
   statusLabel: {fileID: 1500365092}
 --- !u!1001 &1859690743
 PrefabInstance:

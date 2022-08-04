@@ -20,7 +20,6 @@ namespace Web3_Skyrim
         [SerializeField] private TextMeshProUGUI crystalBalanceLabel;
         [SerializeField] private TextMeshProUGUI septimBalanceLabel;
 
-        private GameStateMachine _gameStateMachine;
         private GameInput _gameInput;
         private PlayFabVirtualCurrency _playFabVirtualCurrency;
         
@@ -28,7 +27,6 @@ namespace Web3_Skyrim
 
         private void Awake()
         {
-            _gameStateMachine = GetComponentInParent<GameStateMachine>();
             _gameInput = new GameInput();
         }
 

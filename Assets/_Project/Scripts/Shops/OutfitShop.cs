@@ -26,8 +26,6 @@ namespace Web3_Skyrim
         private int _currentSeptimBalance;
         private string _walletAddress;
         
-        private const string PlayFabCatalog = "Outfit Shop Catalog";
-
         
         #region UNITY_LIFECYLE
 
@@ -74,8 +72,8 @@ namespace Web3_Skyrim
         }
 
         #endregion
-
         
+
         private void GetUserInventory()
         {
             PlayFabClientAPI.GetUserInventory(new GetUserInventoryRequest(),
@@ -100,7 +98,7 @@ namespace Web3_Skyrim
         {
             var request = new GetCatalogItemsRequest()
             {
-                CatalogVersion = PlayFabCatalog
+                CatalogVersion = PlayFabServerSimulator.Instance.catalogName
             };
             
             PlayFabClientAPI.GetCatalogItems(request,
@@ -114,7 +112,7 @@ namespace Web3_Skyrim
                         {
                             // Deserialize the CustomData in the CatalogItem (containing the price) to MetadataObject
                             var customData = catalogItem.CustomData;
-                            MetadataObject metadataObject = DeserializeUsingNewtonSoftJson(customData);
+                            MetadataObject metadataObject = Web3Tools.DeserializeUsingNewtonSoftJson(customData);
                     
                             // We ONLY want objects with attributes. If metadataObject is null or metadataObject.attributes is null, we don't continue
                             if (metadataObject?.attributes is null)
@@ -161,14 +159,6 @@ namespace Web3_Skyrim
                     Debug.Log($"We own {token.Balance} Septim (ST)");
                 }
             }
-        }
-        
-        // TODO place in another script
-        [CanBeNull]
-        private MetadataObject DeserializeUsingNewtonSoftJson(string json)
-        {
-            var metadataObject = JsonConvert.DeserializeObject<MetadataObject>(json);
-            return metadataObject;
         }
     }   
 }

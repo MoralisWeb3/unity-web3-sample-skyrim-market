@@ -11,31 +11,30 @@ using UserDataPermission = PlayFab.ServerModels.UserDataPermission;
 
 namespace Web3_Skyrim
 {
-    public class PlayFabServer : Singleton<PlayFabServer>
+    public class PlayFabServerSimulator : Singleton<PlayFabServerSimulator>
     {
+        public string catalogName;
+        public string currencyCode;
         [HideInInspector] public string playerId;
-        [HideInInspector] public int currentCrystalBalance;
-        
-        //PlayFab Classes
-        private PlayFabVirtualCurrency _playFabVirtualCurrency;
-    
+
+
+        #region UNITY_LIFECYCLE
+
         private void OnEnable()
         {
             Authenticating.OnSuccess += SetPlayFabUserData;
-
-            _playFabVirtualCurrency = new PlayFabVirtualCurrency();
-            _playFabVirtualCurrency.OnGetBalanceSuccess += OnGetBalanceSuccessHandler;
         }
 
         private void OnDisable()
         {
             Authenticating.OnSuccess -= SetPlayFabUserData;
-            _playFabVirtualCurrency.OnGetBalanceSuccess -= OnGetBalanceSuccessHandler;
         }
+
+        #endregion
 
 
         #region EVENT_HANDLERS
-
+        
         private void SetPlayFabUserData(LoginResult loginResult)
         {
             playerId = loginResult.PlayFabId;
@@ -56,11 +55,6 @@ namespace Web3_Skyrim
                     Debug.Log("Got error updating read-only user data:");
                     Debug.Log(error.GenerateErrorReport());
                 });
-        }
-        
-        private void OnGetBalanceSuccessHandler(int currencyBalance)
-        {
-            currentCrystalBalance = currencyBalance;
         }
 
         #endregion

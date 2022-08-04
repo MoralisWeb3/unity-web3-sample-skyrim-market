@@ -9,19 +9,17 @@ namespace Web3_Skyrim
     {
         public event Action<int> OnGetBalanceSuccess;
         
-        private const string CrystalCurrencyCode = "CR";
-
+        
         public void GetBalance()
         {
             PlayFabClientAPI.GetUserInventory(new GetUserInventoryRequest(), OnSuccess, OnError);
         }
 
-        // TODO Do this with PlayStream event
         public void SubstractAmount(int amount)
         {
             var request = new SubtractUserVirtualCurrencyRequest()
             {
-                VirtualCurrency = CrystalCurrencyCode,
+                VirtualCurrency = PlayFabServerSimulator.Instance.currencyCode,
                 Amount = amount
             };
             
@@ -38,12 +36,13 @@ namespace Web3_Skyrim
 
         private void OnSuccess(GetUserInventoryResult result)
         {
-            int coins = result.VirtualCurrency[CrystalCurrencyCode];
+            int coins = result.VirtualCurrency[PlayFabServerSimulator.Instance.currencyCode];
             OnGetBalanceSuccess?.Invoke(coins);
         }
         
         private void OnError(PlayFabError error)
         {
+            Debug.Log("We could get the balance, check CurrencyCode in PlayFabServerSimulator");
             Debug.Log(error);
         }
     }   

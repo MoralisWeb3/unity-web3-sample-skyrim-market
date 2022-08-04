@@ -10,14 +10,16 @@ namespace Web3_Skyrim
         [Header("Transactions")] 
         [SerializeField] private ExchangeTransaction exchangeTx;
         [SerializeField] private OutfitTransaction outfitTx;
-        [SerializeField] private TransactionBase itemTx;
         
         [Header("UI")]
         [SerializeField] protected TextMeshProUGUI statusLabel;
 
-        // Needed components
+        // GameStateMachine
         private GameStateMachine _gameStateMachine;
+        
+        // PlayFab Helper Classes
         private PlayFabVirtualCurrency _playFabVirtualCurrency;
+        private PlayFabRevokeItem _playFabRevokeItem;
 
 
         #region UNITY_LIFECYCLE
@@ -30,6 +32,7 @@ namespace Web3_Skyrim
         private void OnEnable()
         {
             _playFabVirtualCurrency = new PlayFabVirtualCurrency();
+            _playFabRevokeItem = new PlayFabRevokeItem();
             
             TransactionBase.OnSuccess += OnTxSuccessHandler;
             TransactionBase.OnFailure += OnTxFailureHandler;
@@ -61,7 +64,7 @@ namespace Web3_Skyrim
                     break;
                 
                 case ShopType.Item:
-                    itemTx.gameObject.SetActive(true);
+                    // TODO
                     break;
             }
         }
@@ -88,9 +91,10 @@ namespace Web3_Skyrim
                     _playFabVirtualCurrency.SubstractAmount(_gameStateMachine.currentCrystalTxAmount);
                     break;
                 case ShopType.Outfit:
-                    // Todo revoke playfab inventory item to player
-                    // Now we want to revoke the item from the player's playfab inventory so it doesn't have access to it anymore :)
                     
+                    Debug.Log($"{_gameStateMachine.currentOutfitShopItem.GetId()} Outfit bought!");
+                    // Now we want to revoke the item from the player's playfab inventory so it doesn't have access to it anymore :)
+                    _playFabRevokeItem.Revoke(_gameStateMachine.currentOutfitShopItem.GetId());
                     break;
             }
             
@@ -119,7 +123,6 @@ namespace Web3_Skyrim
         {
             exchangeTx.gameObject.SetActive(false);
             outfitTx.gameObject.SetActive(false);
-            itemTx.gameObject.SetActive(false);
         }
 
         private IEnumerator ReturnToShopArea()
