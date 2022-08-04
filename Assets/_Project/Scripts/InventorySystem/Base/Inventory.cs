@@ -33,7 +33,11 @@ namespace Web3_Skyrim
      {
          foreach (Transform childItem in itemsGrid.transform)
          {
-             Destroy(childItem.gameObject);
+             // We only want to destroy InventoryItems so we need to check that
+             if (childItem.GetComponent<InventoryItem>())
+             {
+                 Destroy(childItem.gameObject);   
+             }
          }
      }
      

@@ -25,11 +25,13 @@ namespace Web3_Skyrim
         private void OnEnable()
         {
             PlayerItem.OnSelected += OnPlayerItemSelected;
+            DefaultItem.OnSelected += OnDefaultItemSelected;
         }
 
         private void OnDisable()
         {
             PlayerItem.OnSelected -= OnPlayerItemSelected;
+            DefaultItem.OnSelected -= OnDefaultItemSelected;
         }
 
         #endregion
@@ -50,6 +52,11 @@ namespace Web3_Skyrim
         private void OnPlayerItemSelected(PlayerItem playerItem)
         {
             outfit.ChangeOutfit(playerItem.GetTexture());
+        }
+        
+        private void OnDefaultItemSelected()
+        {
+            outfit.DefaultOutfit();
         }
         
         #endregion
