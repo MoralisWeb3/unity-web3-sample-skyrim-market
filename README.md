@@ -2,27 +2,31 @@
 
 Unity sample project where you can trade in-game currency (PlayFab) for ERC-20 tokens. Only with that tokens you can then buy NFT Outfits which you can actually wear!
 
+In this project we're marrying Web2 and Web3. We're using PlayFab as a backend for in-game currency and displaying items in stores. Then we add the power of Web3 through Moralis to convert these Web2 items to actual NFTs :)
+
 ---  
 
 **Getting Started**
-1. Download this repo (as zip or git)
+1. Download this repository (as zip or git)
 2. Download [Unity](https://unity3d.com/unity/qa/lts-releases?version=2021.3)
-3. Open this repo in Unity
-4. [Import Mumbai Testnet to your MetaMask wallets](https://moralis.io/mumbai-testnet-faucet-how-to-get-free-testnet-matic-tokens/)
-5. Follow the [video tutorial](https://youtu.be/OQrEqICa6mw)
+3. Open the downloaded repository folder in Unity
+4. Make sure you have installed MetaMask wallet both in your browser and in your mobile device
+5. Import Cronos Testnet to your wallets (both) and send some TCRO using the [Cronos Faucet](https://cronos.org/faucet)
+6. Follow the [video tutorial]
 
 See [docs.moralis.io/unity](https://docs.moralis.io/unity) for more info.
 
 **Configuration**
 * `Platform Target` - Standalone MAC/PC & WebGL
 * `Unity Version` - [2021.3.6f1 LTS](https://unity3d.com/unity/qa/lts-releases?version=2021.3)
-* `Render Pipeline` - [Universal Render Pipeline (URP)](https://docs.unity3d.com/Packages/com.unity.render-pipelines.universal@13.1/manual/index.html)
+* `Render Pipeline` - [Built-in Render Pipeline](https://docs.unity3d.com/Manual/built-in-render-pipeline.html)
 
 **Scenes**
 * `Assets/_Project/Scenes/Game.unity`
 
 **Dependencies**
 * [`Moralis Web3 Unity SDK`](https://github.com/MoralisWeb3/web3-unity-sdk)
+* [PlayFab Unity SDK](https://docs.microsoft.com/en-us/gaming/playfab/sdks/unity3d/)
 
 ----
 
@@ -49,6 +53,8 @@ See [docs.moralis.io/unity](https://docs.moralis.io/unity) for more info.
 Give the creators some love ❤️
 
 ## Unity Asset Store
+
+//TODO 
 
 * [Surge](https://assetstore.unity.com/packages/tools/utilities/surge-107312)
 * [Desert Kits 64 Sample](https://assetstore.unity.com/packages/3d/environments/landscapes/desert-kits-64-sample-86482)
