@@ -35,6 +35,16 @@ namespace Web3_Skyrim
         #endregion
 
 
+        #region PUBLIC_METHODS
+
+        public void ShowPlayerWalletAddress()
+        {
+            walletAddress.Activate();
+        }
+
+        #endregion
+        
+        
         #region EVENT_HANDLERS
         
         private void OnPlayerItemSelected(PlayerItem playerItem)
