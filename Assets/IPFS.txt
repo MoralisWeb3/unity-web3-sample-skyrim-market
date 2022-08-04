@@ -1,0 +1,12 @@
+
+GREEN OUTFIT
+https://ipfs.moralis.io:2053/ipfs/QmX3GygxofC92E41DzvrBiGZCqV9g3AnSmuJC4ZWdm8svb/GreenOutfit_637951175628656838.json
+
+RED OUTFIT
+https://ipfs.moralis.io:2053/ipfs/QmShgYv5aQM55Wsdi4ZpHtZgXJKV4XbxnPa62b92uAqiKS/RedOutfit_637951175946913431.json
+
+NAKED OUTFIT
+https://ipfs.moralis.io:2053/ipfs/QmXiVwbsCyJTLzgDrLxx7CEdeRzwfWgy4n2K1bi8TKmJGT/NakedOutfit_637951174857288104.json
+
+YELLOW OUTFIT
+https://ipfs.moralis.io:2053/ipfs/QmeZ8LDaBhQzGzFGhoeZj9HdTgf5327NDby3woHFtAcDe2/YellowOutfit_637951176278102898.json
