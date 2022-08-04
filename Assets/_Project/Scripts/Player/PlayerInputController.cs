@@ -84,6 +84,8 @@ namespace Web3_Skyrim
 		
 		public void EnableInput(bool status)
 		{
+			if (playerInput == null) return;
+			
 			playerInput.enabled = status;
 			
 			cursorLocked = status;
