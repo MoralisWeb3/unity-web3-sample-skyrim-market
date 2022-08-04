@@ -1,8 +1,6 @@
 # 🎮 Web3 Skyrim Market 🎮
 
-In this week’s Moralis Project we’ll go a step forward in relation to NFT use cases in Web3 Games. In some of previous Unity Projects we converted game items into NFTs but this time we’re going to do the reverse.
-
-We will consume an already minted NFT and use its attributes to power up our 3D character movement. Get ready for some Invincible Super Mario vibes!
+Unity sample project where you can trade in-game currency (PlayFab) for ERC-20 tokens. Only with that tokens you can then buy NFT Outfits which you can actually wear!
 
 ---  
 
