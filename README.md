@@ -2,7 +2,9 @@
 
 Unity sample project where you can trade in-game currency (PlayFab) for ERC-20 tokens. Only with that tokens you can then buy NFT Outfits which you can actually wear!
 
-In this project we're marrying Web2 and Web3. We're using PlayFab as a backend for in-game currency and displaying items in stores. Then we add the power of Web3 through Moralis to convert these Web2 items to actual NFTs :)
+Basically we're marrying Web2 and Web3. We're using PlayFab as a backend for the in-game currency and for displaying items in stores. Then we add the power of Web3 through Moralis to convert these Web2 items to the actual NFTs.
+
+Once we own the NFT Outfits, we'll display them in the player inventory and we'll be able to change the player outfit by selecting them :)
 
 ---  
 
