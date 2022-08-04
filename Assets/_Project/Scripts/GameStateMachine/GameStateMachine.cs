@@ -1,3 +1,4 @@
+using System;
 using Pixelplacement;
 using UnityEngine;
 
@@ -45,6 +46,14 @@ namespace Web3_Skyrim
             ShopCollider.OnPlayerEntered -= OnPlayerEnteredHandler;
             Exchange.OnTradeExecuted -= OnTradeExecutedHandler;
             OutfitShop.OnOutfitSelected -= OnOutfitSelectedHandler;
+        }
+
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                Application.Quit();
+            }
         }
 
         #endregion
