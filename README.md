@@ -14,7 +14,7 @@ Once we own the NFT Outfits, we'll display them in the player’s inventory and 
 3. Open the downloaded repository folder in Unity
 4. Make sure you have installed MetaMask wallet both in your browser and in your mobile device
 5. Import Cronos Testnet to your wallets (both) and send some TCRO using the [Cronos Faucet](https://cronos.org/faucet)
-6. Follow the [video tutorial]
+6. Follow the [video tutorial](https://youtu.be/nxezdsQT1Mk)
 
 See [docs.moralis.io/unity](https://docs.moralis.io/unity) for more info.
 
@@ -67,6 +67,6 @@ Give the creators some love ❤️
 
 ## Audio
 
-* 
+* [Black Wolf's Inn - Derek Fiechter](https://www.youtube.com/watch?v=LtDMBtjyq9A)
 
 
