@@ -3865,10 +3865,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dontDestroyOnLoad: 0
-  septimContractAddress: 0xebD253f19A7Fb3Cc4Af634d897AFC13d4f45C8c8
-  outfitContractAddress: 0xAcdB58365bb465E44a2800cf8531170e06206bbd
-  gameContractAddress: 0x8F0e4D3779E928040cd9BA2AEcC7634f0EF6F970
-  gameContractAbi: '[{"inputs":[{"internalType":"address","name":"septimContractAddr","type":"address"},{"internalType":"address","name":"outfitContractAddr","type":"address"}],"stateMutability":"nonpayable","type":"constructor"},{"inputs":[{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"addSeptim","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"},{"internalType":"uint256","name":"price","type":"uint256"},{"internalType":"string","name":"metadataUrl","type":"string"}],"name":"buyOutfit","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"getSeptimBalance","outputs":[{"internalType":"uint256","name":"balance","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"removeSeptim","outputs":[],"stateMutability":"nonpayable","type":"function"}]'
+  septimContractAddress: 
+  outfitContractAddress: 
+  gameContractAddress: 
+  gameContractAbi: 
 --- !u!114 &605362994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6408,8 +6408,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dontDestroyOnLoad: 0
-  catalogName: Outfit Shop Catalog
-  currencyCode: CR
+  catalogName: 
+  currencyCode: 
   playerId: 
 --- !u!114 &931081984
 MonoBehaviour:
