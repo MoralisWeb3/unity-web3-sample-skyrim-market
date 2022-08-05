@@ -28,7 +28,7 @@ See [docs.moralis.io/unity](https://docs.moralis.io/unity) for more info.
 
 **Dependencies**
 * [`Moralis Web3 Unity SDK`](https://github.com/MoralisWeb3/web3-unity-sdk)
-* [PlayFab Unity SDK](https://docs.microsoft.com/en-us/gaming/playfab/sdks/unity3d/)
+* [`PlayFab Unity SDK`](https://docs.microsoft.com/en-us/gaming/playfab/sdks/unity3d/)
 
 ----
 
