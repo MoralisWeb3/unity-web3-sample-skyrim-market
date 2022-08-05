@@ -28,7 +28,7 @@
     npx hardhat clean
     npx hardhat compile
 
-// 11. RUN "scripts/deploy.js" TO DEPLOY SMART CONTRACTS
+// 6. RUN "scripts/deploy.js" TO DEPLOY SMART CONTRACTS
 
     npx hardhat run scripts/deploy.js --network cronosTestnet
 
