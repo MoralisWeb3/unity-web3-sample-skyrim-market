@@ -5,6 +5,12 @@ import "hardhat/console.sol";
 import "contracts/Septim.sol";
 import "contracts/Outfit.sol";
 
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! //
+// This is NOT a production-ready contract as all functions are public
+// Anyone could call this functions knowing the contract address 
+// You should implement some type of access control
+// More info about this: https://docs.openzeppelin.com/contracts/4.x/access-control
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! //
 contract GameContract
 {
     ///////////////////////////////////////////////////////////

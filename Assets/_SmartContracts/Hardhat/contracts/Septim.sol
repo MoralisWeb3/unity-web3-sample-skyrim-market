@@ -4,6 +4,12 @@ pragma solidity ^0.8.9;
 import "hardhat/console.sol";
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! //
+// This is NOT a production-ready contract as all functions are public
+// Anyone could call this functions knowing the contract address 
+// You should implement some type of access control
+// More info about this: https://docs.openzeppelin.com/contracts/4.x/access-control
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! //
 contract Septim is ERC20 
 {
     address _owner;

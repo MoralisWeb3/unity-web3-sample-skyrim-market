@@ -4,6 +4,12 @@ pragma solidity ^0.8.9;
 import "hardhat/console.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! //
+// This is NOT a production-ready contract as all functions are public
+// Anyone could call this functions knowing the contract address 
+// You should implement some type of access control
+// More info about this: https://docs.openzeppelin.com/contracts/4.x/access-control
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! //
 contract Outfit is ERC721URIStorage {
 
     constructor() ERC721("Outfit", "OTF") {}
